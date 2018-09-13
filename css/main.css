@@ -1,0 +1,208 @@
+body,html,form{
+    margin: 0;
+}
+
+
+header{
+    display: block;
+    width: 60px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    display: inline-block;
+    font-size: 26px;
+    color: #FFF;
+    margin: 15px;
+    cursor: pointer;
+}
+.selection-section{
+    display: inline-block;
+    position: fixed;
+    overflow: auto;
+    height: 100%;
+    width: calc((100% - 60px) / 2);
+    margin-left: calc(((100% - 60px) / 2) + 60px);
+    border-left: 1px solid green;
+
+}
+.main-section{
+    display: inline-block;
+    position: fixed;
+    width: calc((100% - 60px) / 2);
+    height: 100%;
+    margin-left: calc(60px);
+    background-color: #FFF;
+}
+.inner-selection{
+    width: calc(100% /2);
+    height: 100%;
+    margin: 0 auto;
+}
+.config{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid green;
+}
+h1{
+    font-size: 22px;
+    text-align: center;
+    padding-top: 40px;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 16px;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 40px;
+    text-transform: uppercase;
+}
+ul{
+    padding-left: 0;
+}
+li{
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+li:hover{
+    background-color: #fafafa;
+}
+label{
+    cursor: pointer;
+}
+.thumbnail{
+    position: relative;
+    float: left;
+}
+.thumb-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    object-fit: cover;
+}
+.thumb-img:hover{
+    transition: 0.6s;
+    border-color: green;
+}
+.text{
+    display: table-cell;
+    padding: 0;
+    padding-left: 40px;
+}
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"]:checked + i:before {
+    content:'\2714';
+    font-size: 24px;
+    color: green;
+    float: right;
+}
+input[type="name"] {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    transition: 0.6s;
+    border: none;
+    border-bottom: 1px solid green;
+    background-color: transparent;
+  }
+input[type="name"]:focus{
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+
+.text strong{
+    display: block;
+}
+.preview{
+    height: calc(100% /3);
+}
+.inner-preview img{
+    margin: 0 auto;
+    display: block;
+    max-width: 30%;
+    height: auto;
+}
+.loadout-text{
+    height: 20%;
+}
+#ammunition-img{
+    width: 20%;
+}
+#optic-img{
+    width: 20%
+}
+.right-corner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    width: 120px;
+    height: 120px;
+}
+.left-corner{
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    background-color: red;
+    width: 120px;
+    height: 120px;
+}
+
+.bttn-save{
+    display: block;
+    padding: 15px 25px;
+    color:#333;
+    border: solid 1px #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.bttn-save:hover{
+    color: green;
+    border-color: green;
+}
+
+
+
+
+
+@media screen and (max-width:840px){
+    .main-section{
+        width: calc(100% - 60px);
+        position: relative;
+    }
+    .selection-section{
+        display: block;
+        width: calc(100% - 60px);
+        margin-left: calc(60px);
+        position: relative;
+        height: auto;
+        border: none;
+        border-top: 2px solid green;
+    }
+    .inner-selection{
+        width: calc(100% - 60px);
+        height: auto;
+    }
+    .config{
+        margin-bottom: 0;
+    }
+    .bttn-save{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

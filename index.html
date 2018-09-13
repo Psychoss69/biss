@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="fa fa-bars logo"></a>
+    </header>
+    <section class="main-section">
+        <div class="preview">
+            <h2>Weapon:</h2>
+            <div class="inner-preview">
+                <img id="weapon-img">
+            </div>
+        </div>
+        <div class="preview">
+            <h2>Optic:</h2>
+            <div class="inner-preview">
+                <img id="optic-img">
+            </div>
+        </div>
+        <div class="preview">
+            <h2>Ammunition:</h2>
+            <div class="inner-preview">
+                <img id="ammunition-img">
+            </div>
+        </div>
+    </section>
+
+
+    <!--Right section//configuration window-->
+    <section class="selection-section">
+        <div class="inner-selection">
+            <form id="configForm" class="configForm">
+                <div class="config">
+                        <h2>Configuration name</h2>
+                        <ul class="select">
+                            <li>
+                                <input type="name" id="loudout-name" placeholder="Config name..." name="configname">
+                            </li> 
+                        </ul>
+                    <h2>Weapon type</h2>
+                    <ul class="select">
+                        <li>
+                            <input type="radio" value="1" id="weapon1" name="weapons" onclick="WeaponPick()"><i></i>
+                            <label class="thumbnail" for="weapon1">
+                                <img class="thumb-img" src="./assets/img/ak47.png">
+                            </label>
+                            <label class="text" for="weapon1">
+                                <span>
+                                    <strong id="ak">Ak-47</strong>
+                                    Automatic rifle
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" value="2" id="weapon2" name="weapons" onclick="WeaponPick()"><i></i>
+                            <label class="thumbnail" for="weapon2">
+                                <img class="thumb-img" src="./assets/img/m16.png">
+                            </label>
+                            <label class="text" for="weapon2">
+                                <span>
+                                    <strong id="m16">M-16</strong>
+                                    Automatic rifle
+                                </span>
+                            </label>
+                        </li>    
+                    </ul>
+                    <h2>Weapon Optics</h2>
+                    <ul class="select">
+                        <li>
+                            <input type="radio" value="1" id="optic1" name="optics" onclick="OpticPick()"><i></i>
+                            <label class="thumbnail" for="optic1">
+                                <img class="thumb-img" src="./assets/img/reddot.png">
+                            </label>
+                            <label class="text" for="optic1">
+                                <span>
+                                    <strong id="reddot">Red dot scope</strong>
+                                    Smaller range
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" value="2" id="optic2" name="optics" onclick="OpticPick()"><i></i>
+                            <label class="thumbnail" for="optic2">
+                                <img class="thumb-img" src="./assets/img/acog.png">
+                            </label>
+                            <label class="text" for="optic2">
+                                <span>
+                                    <strong id="acog">Acog scope</strong>
+                                    Better range
+                                </span>
+                            </label>
+                        </li>    
+                    </ul>
+                    <h2>Weapon Ammunition</h2>
+                    <ul class="select">
+                        <li>
+                            <input type="radio" value="1" id="ammunition1" name="ammunition" onclick="AmmunitionPick()"><i></i>
+                            <label class="thumbnail" for="ammunition1">
+                                <img class="thumb-img" src="./assets/img/small-mag.png">
+                            </label>
+                            <label class="text" for="ammunition1">
+                                <span>
+                                    <strong id="30">30 round magazine</strong>
+                                    Small mag
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" value="2" id="ammunition2" name="ammunition" onclick="AmmunitionPick()"><i></i>
+                            <label class="thumbnail" for="ammunition2">
+                                <img class="thumb-img" src="./assets/img/big-mag.png">
+                            </label>
+                            <label class="text" for="ammunition2">
+                                <span>
+                                    <strong id="50">50 round magazine</strong>
+                                    Bigger mag
+                                </span>
+                            </label>
+                        </li>    
+                    </ul>
+                </div>
+                <a class="bttn-save" onclick="SaveLoadout()">Save loadout</a>
+                <a class="bttn-save" onclick="CancelConfig()">Cancel</a>
+            </form>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
